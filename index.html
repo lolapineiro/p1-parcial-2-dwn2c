@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Programación I | Parcial 2 | PIÑEIRO - PICART</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="styles.css" />
+        
+    </head>
+    <body  onload="cargarproductos()">
+        <header>
+            <h1>Programación I | Parcial 2 | PICART - PIÑEIRO | Mi carrito</h1>
+        </header>
+        <main>
+            <div id="minicarrito">
+                <p><span id="cantidadintems">0</span> ítems agregados</p>
+                <p>$<span id="totalapagar">0</span> es el total</p>
+                <p>Filtrar por <a href="index.html?categoria=1">IPHONE</a> | <a href="index.html?categoria=2">MOTOROLA</a> | <a href="index.html?categoria=3">SAMSUNG</a></p>
+                <button onclick="vercarrito()">Ver carrito</button>
+            </div>
+
+            <div class="limpiar"> <a class="x"  onclick="cargarTodosLosProductos()">Limpiar búsqueda</a></div>
+
+            <h2>Productos</h2>
+            
+
+            <div id="productos">
+                
+                
+            </div>
+
+        </main>
+        <footer>
+            <ul>
+                <li>Profesor Fabrizio Carlassara</li>
+                <li>
+                    <a href="mailto:fabrizio.carlassara@davinci.edu.ar?subject=P1%20-%20Consulta%20-%20DW2[M|T|N][A|B]%20-%20Apellido,%20Nombre" target="_blank">fabrizio.carlassara@davinci.edu.ar</a>
+                </li>
+                <li>Programación 1</li>
+            </ul>
+        </footer>
+  
+        <div class="modal oculto" id="modalProducto">
+            <a class="cerrar" href="javascript:void(0)" onclick="cerrarModalProducto()">X</a>
+            <div id="datosproducto">
+
+            </div>
+        </div>
+
+        <div class="modal oculto" id="modalCarrito">
+            <a class="cerrar" href="javascript:void(0)" onclick="cerrarModalCarrito()">X</a>
+            <div id="datoscarrito"></div>
+        </div>
+
+        
+    </body>
+    <script src="index.js"></script>
+</html>
